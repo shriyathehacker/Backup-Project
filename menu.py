@@ -3,7 +3,7 @@ import pygame
 class RadioButtons:
     def __init__(self, x, y, width, height, id, isDefault): #Initalize the object
         self.id = id #Assign a unique identifier to the buttons
-        if 0 <= id <= 4:
+        if 0 <= id <= 5:
             self.sheet = pygame.image.load("Textures/Menu/radioButtons.png").convert_alpha()
             self.image = getSprites(self.sheet, 0, 200 * id , 500, 200)#The buttons will be squares
         else:
@@ -70,8 +70,10 @@ def convertCode(themeCode):
         return "Space"
     elif themeCode == 3:
         return "Snowy"
-    else:
+    elif themeCode == 4:
         return "Jurassic"
+    else:
+        return "Mine"
     
 def runMenu(screen, theme):
     size = pygame.display.get_window_size()

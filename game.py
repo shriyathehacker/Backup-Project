@@ -509,8 +509,10 @@ def convertCode(themeCode):
         return "Space"
     elif themeCode == 3:
         return "Snowy"
-    else:
+    elif themeCode == 4:
         return "Jurassic"
+    else:
+        return "Mine"
     
 def run(screen, themeCode):
     global centerx, centery, running, tileMap
@@ -645,7 +647,7 @@ def run(screen, themeCode):
                     terminate(player, healthBar, slimeSword, slimeTank, bossBar)
                     return False
 
-                if event.key == pygame.K_m: #If we press keypad plus, we take a screen shot
+                if event.key == pygame.K_KP_PLUS: #If we press keypad plus, we take a screen shot
                     pygame.image.save(screen, "menuPage.png")
 
                 if event.key == pygame.K_k:
