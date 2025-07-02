@@ -7,12 +7,12 @@ class RadioButtons:
             self.sheet = pygame.image.load("Textures/Menu/radioButtons.png").convert_alpha()
             self.image = getSprites(self.sheet, 0, 200 * id , 500, 200)#The buttons will be squares
         else:
-            self.image = pygame.Surface((width, height))
+            self.image = pygame.Surface((width, height)) #Creates a surface of dimensions height
             if isDefault:
                 self.image.fill((0, 255, 0))
             else:
                 self.image.fill((255, 0, 0)) #Fill in the object accordingly
-        self.rect = self.image.get_rect(center = (x, y))
+        self.rect = self.image.get_rect(center = (x, y)) #Positions Radio Buttons correctly
 
 class RadioButtonManager:
     def __init__(self, positions, width, height, theme):

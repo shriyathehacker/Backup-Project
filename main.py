@@ -18,3 +18,5 @@ while isPlaying: #Have we quitted the game
             isPlaying = False #They must of quitted the game and so we quit the program
     else:
         isPlaying = False #The player quitted the program so the game closes
+
+        

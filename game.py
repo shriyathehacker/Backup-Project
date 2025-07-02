@@ -58,7 +58,7 @@ class HealthBar:
 
     def damage(self):
         if not(self.immunity):
-            if self.pointer == 0:
+            if self.pointer == 0:   
                 return True #If we are dead, 
             self.pointer -= 1 #decrement the pointer  #When player loses all health the game ends
             self.image = pygame.image.load(self.textures[self.pointer]).convert_alpha() #Show corresponding healthbar
@@ -89,7 +89,6 @@ class Player(pygame.sprite.Sprite):
     def __init__(self, x, y):
         super().__init__()
         self.image = pygame.Surface((100, 100))
-        self.image.fill((255, 200, 200))
         self.rect = self.image.get_rect(center = (x, y))
         self.isAttacking = False
         self.health = 3
@@ -146,7 +145,7 @@ class Enemy(pygame.sprite.Sprite):
         self.reverse = False
         self.count = 0
         self.max = numberOfFrames
-
+    
         self.rect = self.image.get_rect(center = (x, y))
         self.velocity = 15
         self.currentNode = nodeID
